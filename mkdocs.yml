@@ -44,10 +44,10 @@ plugins:
   - atom:
       feed_url: https://euclidstoolworks.substack.com/feed
       title: Euclid's Toolworks Substack
-  - mkdocs-git-revision-date-localized-plugin
-  - mkdocs-git-authors-plugin
-  - mkdocs-material-extensions
-  - mkdocs-minify-plugin
-  - mkdocs-redirects
-  - mkdocs-include-markdown-plugin
-  - mkdocs-git-revision-date-localized-plugin
+  #- mkdocs-git-revision-date-localized-plugin
+  #- mkdocs-git-authors-plugin
+  #- mkdocs-material-extensions
+  #- mkdocs-minify-plugin
+  #- mkdocs-redirects
+  #- mkdocs-include-markdown-plugin
+  #- mkdocs-git-revision-date-localized-plugin
