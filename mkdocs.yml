@@ -1,0 +1,53 @@
+site_name: Euclid's Toolworks Substack
+site_url: https://euclidstoolworks.substack.com
+theme:
+  name: material
+  logo: images/Euclid.jpg
+  favicon: images/Euclid.jpg
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
+plugins:
+  - glightbox
+  - atom:
+      feed_url: https://euclidstoolworks.substack.com/feed
+      title: Euclid's Toolworks Substack
+  - mkdocs-git-revision-date-localized-plugin
+  - mkdocs-git-authors-plugin
+  - mkdocs-material-extensions
+  - mkdocs-minify-plugin
+  - mkdocs-redirects
+  - mkdocs-include-markdown-plugin
+  - mkdocs-git-revision-date-localized-plugin
