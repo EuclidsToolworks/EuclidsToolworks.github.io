@@ -31,6 +31,13 @@ jobs:
         run: 
           poetry install --no-root
 
+      # debug secret
+      - name: Debug secret
+        run: |
+          echo "GH_PAT is set"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}  # Use the GitHub token for authentication
+
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         env:
