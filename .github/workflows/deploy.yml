@@ -34,14 +34,14 @@ jobs:
       # debug secret
       - name: Debug secret
         run: |
-          echo "GH_PAT is set"
+          echo "GITHUB_TOKEN is set"
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # Use the GitHub token for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # Use the GitHub token for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
         run: | 
           poetry run mkdocs build
           rm -rf docs
@@ -49,7 +49,7 @@ jobs:
           touch docs/.nojekyll  # Add .nojekyll to prevent Jekyll processing
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/EuclidsToolworks/EuclidsToolworks.github.io.git
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/EuclidsToolworks/EuclidsToolworks.github.io.git
           git add docs
           git commit -m "Deploy site to GitHub Pages"
           git push origin main
