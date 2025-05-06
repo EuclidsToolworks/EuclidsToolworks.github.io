@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: | 
           poetry run mkdocs build
-          rm -rm docs
+          rm -rf docs
           mv site docs
           git config usweer.name "github-actions[bot]"
           git config user.mail "github-actions[bot]@users.noreply.github.com"
