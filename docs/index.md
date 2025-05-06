@@ -2,6 +2,7 @@
 title: Euclid's Toolworks Substack
 date: 2025-04-29
 ---
+
 # Welcome to Euclid's Toolworks
 
 ## **"Please allow me to introduce myself I'm a man of wealth and taste..."**
